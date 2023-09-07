@@ -6,6 +6,7 @@ import AddUserModel from './component/models/userTableModel/AddUserModelComponen
 import UpdateUserModel from './component/models/userTableModel/UpdateUserModelComponent'
 import DeleteUserModel from './component/models/userTableModel/DeleteUserModelComponent'
 import UserTable from './component/UserTableComponent'
+import ButtonA from './component/buttons/ButtonComponent'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -21,8 +22,18 @@ function App() {
                   <h2>Manage <b>Employees</b></h2>
                 </div>
                 <div className="col-sm-6">
-                  <a href="#addEmployeeModal" className="btn btn-success" data-toggle="modal"><i className="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
-                  <a href="#deleteEmployeeModal" className="btn btn-danger" data-toggle="modal"><i className="material-icons">&#xE15C;</i> <span>Delete</span></a>						
+                  <ButtonA
+                    href="#addEmployeeModal"
+                    title="Add New Employee"
+                    color="btn-success"
+                    icon={('<i class="material-icons">&#xE147;</i>')}
+                  />
+                  <ButtonA
+                    href="#deleteEmployeeModal"
+                    title="Delete"
+                    color="btn-danger"
+                    icon={('<i class="material-icons">&#xE15C;</i>')}
+                  />
                 </div>
               </div>
             </div>
