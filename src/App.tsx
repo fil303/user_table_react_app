@@ -7,6 +7,7 @@ import UpdateUserModel from './component/models/userTableModel/UpdateUserModelCo
 import DeleteUserModel from './component/models/userTableModel/DeleteUserModelComponent'
 import UserTable from './component/UserTableComponent'
 import ButtonA from './component/buttons/ButtonComponent'
+import Test from './component/TestComponent'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import { useState, useCallback } from 'react';
 
@@ -54,7 +55,7 @@ function App() {
             <Router>
               <Routes>
                 <Route path="/" element={<UserTable />} />
-                <Route path="/test" element={(<div> <Link to="/">Home</Link>This is test message</div>)} />
+                <Route path="/test" element={<Test />} />
               </Routes>
             </Router>
             
