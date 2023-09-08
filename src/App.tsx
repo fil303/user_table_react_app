@@ -7,6 +7,7 @@ import UpdateUserModel from './component/models/userTableModel/UpdateUserModelCo
 import DeleteUserModel from './component/models/userTableModel/DeleteUserModelComponent'
 import UserTable from './component/UserTableComponent'
 import ButtonA from './component/buttons/ButtonComponent'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -24,7 +25,7 @@ function App() {
                 <div className="col-sm-6">
                   <ButtonA
                     href="#addEmployeeModal"
-                    title="Add New Employee"
+                    title="Add New Employee" 
                     color="btn-success"
                     icon={(<i className="material-icons">&#xE147;</i>)}
                   />
@@ -37,9 +38,16 @@ function App() {
                 </div>
               </div>
             </div>
-            <UserTable />
+            
+            <Router>
+              <Routes>
+                <Route path="/" element={<UserTable />} />
+                <Route path="/test" element={(<div> <Link to="/">Home</Link>This is test message</div>)} />
+              </Routes>
+            </Router>
+            
           </div>
-        </div>    
+        </div> 
       </div>        
       {/* <!-- Add Modal HTML --> */}
       <AddUserModel />

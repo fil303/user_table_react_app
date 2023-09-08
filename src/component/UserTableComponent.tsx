@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
 import UserTableOption from "./UserTableOptionComponent"
 
 const UserTable = () => {
     return (
         <>
+            <Link to="/test">Test</Link>
             <table className="table table-striped table-hover">
                 <thead>
                     <tr>
