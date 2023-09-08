@@ -8,10 +8,21 @@ import DeleteUserModel from './component/models/userTableModel/DeleteUserModelCo
 import UserTable from './component/UserTableComponent'
 import ButtonA from './component/buttons/ButtonComponent'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import { useState, useCallback } from 'react';
 
 function App() {
-  //const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0)
 
+  const memoizedFunction = useCallback(() => {
+    const countNumber:number = count
+    alert('Function called '+countNumber+" time")
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
+
+  const handleClick = () => {
+    // Update the clickCount state when the button is clicked
+    setCount(count + 1);
+  };
   return (
     <>
       <div className="container-xl">
@@ -38,7 +49,8 @@ function App() {
                 </div>
               </div>
             </div>
-            
+            <button onClick={handleClick}>Count {count}</button>
+            <button onClick={memoizedFunction}>Click me</button>
             <Router>
               <Routes>
                 <Route path="/" element={<UserTable />} />
