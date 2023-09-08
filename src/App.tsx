@@ -26,13 +26,13 @@ function App() {
                     href="#addEmployeeModal"
                     title="Add New Employee"
                     color="btn-success"
-                    icon={('<i class="material-icons">&#xE147;</i>')}
+                    icon={(<i className="material-icons">&#xE147;</i>)}
                   />
                   <ButtonA
                     href="#deleteEmployeeModal"
                     title="Delete"
                     color="btn-danger"
-                    icon={('<i class="material-icons">&#xE15C;</i>')}
+                    icon={(<i className="material-icons">&#xE15C;</i>)}
                   />
                 </div>
               </div>
